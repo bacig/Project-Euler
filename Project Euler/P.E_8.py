@@ -14,10 +14,3 @@ for j in range(0,987):
         largest_product = _13digit[0]*_13digit[1]*_13digit[2]*_13digit[3]*_13digit[4]*_13digit[5]*_13digit[6]*_13digit[7]*_13digit[8]*_13digit[9]*_13digit[10]*_13digit[11]*_13digit[12]
 
 print(largest_product)
-
-
-'''
-_ _ _ _ _ _ _
-x x x
-
-''' 
