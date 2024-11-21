@@ -1,3 +1,4 @@
+import time
 def EvenFibonacciSum(n):
     
     _fib_i1 = 1
@@ -15,4 +16,7 @@ def EvenFibonacciSum(n):
     return sum
 
 if __name__ == "__main__":
+    start = time.perf_counter()
     print(EvenFibonacciSum(3999999))
+    end = time.perf_counter()
+    print(end - start)
