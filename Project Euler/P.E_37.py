@@ -1,6 +1,5 @@
 import math
 import time
-truncable_primes = 0
 
 def is_prime(n):
     i = 2
@@ -40,15 +39,20 @@ def remove_left(n):
 
 i = 23
 sum = 0
+truncable_primes = 0
 truncable_primes_list = []
+
 start = time.perf_counter()
+
 while truncable_primes < 11:
     if remove_right(i) != 0:
         if remove_left(i) != 0:
-            sum += i
+            sum += i    
             truncable_primes += 1
             truncable_primes_list.append(i)
     i += 1
+
 end = time.perf_counter()
+
 print(sum, truncable_primes_list)
 print(end - start)
