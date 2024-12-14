@@ -11,7 +11,6 @@ def divisibles(n):
 
 def sum_list(n):
     sum = 0
-
     for i in n:
         sum += i
 
