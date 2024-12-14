@@ -1,3 +1,4 @@
+import time
 import math
 import numpy as np
 
@@ -10,12 +11,16 @@ def valid_solution(a : int, b : int) -> list[bool, int] | bool:
         if p <= 1000:
             return [True, p]
     return [False, 0]
-            
+
+start = time.perf_counter()
+
 for a in range(1,500):
     for b in range(1, 500):
         solution = valid_solution(a,b)
         if solution[0]:
             solutions[solution[1] - 1][1] += 1 
+
+end = time.perf_counter()
 
 perimeter, largest = 0, 0
 
@@ -24,3 +29,4 @@ for solution in solutions:
         perimeter, largest = solution[0], solution[1]
 
 print(perimeter, largest)
+print(end - start)
