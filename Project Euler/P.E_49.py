@@ -34,7 +34,9 @@ def prime_permutation(prime):
 start = time.perf_counter()
 
 primes = [prime for prime in range(1000,9999) if is_prime(prime)]
+
 sequence = []
+
 for prime in primes:
     permutation = prime_permutation(prime)
     primes_in_permutation = [number for number in permutation if is_prime(number)]    
@@ -46,8 +48,8 @@ for prime in primes:
                 sequence.append(triple)
                 break
         
-
 print(sequence)
 
 end = time.perf_counter()
+
 print(end - start)
