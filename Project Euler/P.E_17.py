@@ -74,9 +74,7 @@ def numbers_to_words(n):
 
 
 def main(n):
-
     one_to_thousand = [number for number in range(1, n + 1)]
-
     sum = 0
 
     for number in one_to_thousand:
@@ -84,6 +82,7 @@ def main(n):
         sum += len(numbers_to_words(number))
 
     return sum
+
 
 start = time.perf_counter()
 

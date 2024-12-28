@@ -1,18 +1,22 @@
-def main(n):
+import time
 
+
+def main(n):
     longest_chain = 0
     longest_chain_number = 1
     i = 1
+
     while i < n:
         if longest_chain < collatz_sequence(i):
             longest_chain = collatz_sequence(i)
             longest_chain_number = i
+
         i += 1
 
     return longest_chain, longest_chain_number
 
-def collatz_sequence(n):
 
+def collatz_sequence(n):
     chain_size = 1
     
     while n > 1: 
@@ -29,4 +33,11 @@ def collatz_sequence(n):
 
     return chain_size
 
-print(main(1000000))
+
+start = time.perf_counter()
+
+print(main(1e6))
+
+end = time.perf_counter()
+
+print(end - start)

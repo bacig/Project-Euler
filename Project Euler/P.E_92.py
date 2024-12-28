@@ -12,12 +12,9 @@ def chain(num):
         return 89
 
     else:
-
         num_str = str(num)
         temp = 0
-
         for digit in num_str:
-
             temp += int(digit)**2
 
         return chain(temp)
@@ -25,30 +22,16 @@ def chain(num):
 
 start = time.perf_counter()
 
-
 _89_count = 0
 _1_count = 0  
 
 for number in range(2, int(1e7)):
-
     if chain(number) == 1:
-
         _1_count += 1
 
     else:
-
         _89_count += 1
         print(_89_count)
-
-"""for number in range(2,100):
-
-    if chain(number) == 1:
-
-        print(f"o número {number} termina em 1")
-
-    else:
-
-        print(f"o número {number} termina em 89")"""
 
 
 print(f"{_89_count} números acabam em 89 e {_1_count} números acabam em 1.")

@@ -1,5 +1,6 @@
 import time
 
+
 def is_palindrome(n):
     n_string = str(n)
     palindrome = True
@@ -10,10 +11,10 @@ def is_palindrome(n):
 
     return palindrome
 
-def reverse_number(n):
-    n_length = len(str(n))
 
+def reverse_number(n):
     reverse = 0
+
     while n != 0:
         last_digit = n % 10
         reverse = 10 * reverse + last_digit 
@@ -21,10 +22,11 @@ def reverse_number(n):
 
     return reverse
 
+
 def is_lychrel(n):
     lychrel = True
-
     i = 0
+
     while i < 50 and lychrel == True:
         n = n + reverse_number(n)
         if is_palindrome(n):
@@ -42,7 +44,11 @@ def main():
     
     return count
 
+
 start = time.perf_counter()
+
 print(main())  
+
 end = time.perf_counter()
+
 print(end - start)

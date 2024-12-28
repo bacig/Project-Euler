@@ -4,9 +4,7 @@ from itertools import permutations
 start = time.perf_counter()
 
 permutation = list(permutations('0123456789', 10))
-
 permutation = permutation[362880:]
-
 target = []
 
 for number in permutation:
@@ -29,6 +27,6 @@ for number in target:
 
 end = time.perf_counter()
 
-print(target)
 print(sum)
+
 print(end - start) 

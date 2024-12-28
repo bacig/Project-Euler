@@ -1,5 +1,6 @@
 import time
 
+
 number_grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
 [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 00],
 [81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65],
@@ -20,6 +21,7 @@ number_grid = [[8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 7
 [20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 4, 36, 16],
 [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]]
+
 
 def largest_horizontally():
     adjacents_product = 0
@@ -44,6 +46,7 @@ def largest_vertically():
     return (f"O maior produto encontrado na direção vertical foi: "
             f"{adjacents[0]} x {adjacents[1]} x {adjacents[2]} x {adjacents[3]} = {adjacents_product}")
 
+
 def largest_right_diagonal():
     adjacents_product = 0
     for row in range(len(number_grid) - 3):
@@ -55,6 +58,7 @@ def largest_right_diagonal():
     return (f"O maior produto encontrado na direita diagonal foi: "
             f"{adjacents[0]} x {adjacents[1]} x {adjacents[2]} x {adjacents[3]} = {adjacents_product}")
 
+
 def largest_left_diagonal():
     adjacents_product = 0
     for row in range(len(number_grid) - 3):
@@ -65,6 +69,7 @@ def largest_left_diagonal():
                 adjacents = [number_grid[row][number] , number_grid[row + 1][number - 1] , number_grid[row + 2][number - 2] , number_grid[row + 3][number - 3]]
     return (f"O maior produto encontrado na esquerda diagonal foi: "
             f"{adjacents[0]} x {adjacents[1]} x {adjacents[2]} x {adjacents[3]} = {adjacents_product}")
+
 
 start = time.perf_counter()
 

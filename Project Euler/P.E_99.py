@@ -9,6 +9,7 @@ def main():
     pair = []
     number = ''
     i = 0
+
     while i <= len(data_read):
         try:
             if data_read[i] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
@@ -30,6 +31,7 @@ def main():
 
     largest_pair, base, expoent, line = 0, 0, 0, 0
     line_count = 1
+    
     for row in file:
         if row[1]*m.log(row[0]) > largest_pair:
             largest_pair, base, expoent, line = row[1]*m.log(row[0]), row[0], row[1], line_count
@@ -38,6 +40,9 @@ def main():
     return largest_pair, base, expoent, line
 
 start = time.perf_counter()
+
 print(main())
+
 end = time.perf_counter()
+
 print(end - start)

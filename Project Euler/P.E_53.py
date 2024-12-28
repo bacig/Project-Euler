@@ -1,6 +1,5 @@
 import math as m
 import time
-import num2words
 
 
 factorials = [m.factorial(i) for i in range(101)]
@@ -22,6 +21,9 @@ def main():
     return greater_than_1million, larger, i, j
 
 start = time.perf_counter()
+
 print(main())
+
 end = time.perf_counter()
+
 print(end - start)

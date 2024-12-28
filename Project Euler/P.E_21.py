@@ -1,5 +1,5 @@
 import math as m
-import time as t
+import time
 
 
 def sum_divisors_of(n):
@@ -32,10 +32,10 @@ def main():
     return amicable_sum//2
 
 
-start = t.perf_counter()
+start = time.perf_counter()
 
 print(main())
 
-end = t.perf_counter()
+end = time.perf_counter()
 
 print(end - start)

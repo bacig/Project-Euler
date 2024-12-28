@@ -1,5 +1,6 @@
 import time
 
+
 def main():
     largest_palindrome = 0,0,0
     
@@ -22,6 +23,9 @@ def is_palindrome(n):
     return palindrome
 
 start = time.perf_counter()
+
 print(main())
+
 end = time.perf_counter()
+
 print(end - start)
